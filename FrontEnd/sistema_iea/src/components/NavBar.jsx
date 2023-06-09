@@ -10,8 +10,8 @@ return (
         <div className='nav_title'>Instituto  de Educación de <p>Aguascalientes</p></div></div>
         <div className={`nav_items ${isOpen && "open"}`}>
             <a href="#">INICIO</a>
-            <a href="#">¿QUIÉN SOMOS?</a>
-            <a href="#">LOGIN</a>
+            <a href="#seccion1">¿QUIÉNES SOMOS?</a>
+            <a href="#"><i className="bi bi-person-circle i"></i> LOGIN</a>
         </div>
         <div className={`nav_toggle ${isOpen && "open"}`} onClick={ () => setIsOpen(!isOpen)}>
             <span></span>

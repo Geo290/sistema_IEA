@@ -2,10 +2,10 @@
 margin: 0;
 padding: 0;
 height: 100%;
-
+scroll-behavior: smooth;
 }
 
 body{
-    background:linear-gradient(to top, rgba(206, 200, 206, 0.561),rgba(254, 255, 255, 0.436)); background-repeat: cover; 
+    background:linear-gradient(to top, rgba(214, 213, 214, 0.561),rgba(254, 255, 255, 0.436)); background-repeat: cover; 
 
 }

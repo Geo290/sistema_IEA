@@ -1,6 +1,6 @@
 .navbar{
     
-    background: rgba(33, 145, 157, 0.981);
+    background: rgb(247, 247, 247);
     height: 90px;
     display: flex;
     flex-wrap: wrap;
@@ -9,57 +9,111 @@
     position: sticky;
     top: 0; 
     box-sizing: border-box;
-    box-shadow: 0px 17px 59px 11px rgba(61, 84, 152, 0.919);
-    -webkit-box-shadow: 0px 5px 80px 6px rgba(51, 81, 138, 0.608);
-    -moz-box-shadow: 0px 17px 59px 60px rgba(61, 49, 49, 0.339);
+    box-shadow: 0px 7px 39px 11px rgba(61, 84, 152, 0.919);
+    -webkit-box-shadow: 0px 5px 30px 6px rgba(192, 188, 234, 0.608);
+    -moz-box-shadow: 0px 17px 89px 60px rgba(61, 49, 49, 0.339);
 
 }
 
 .nav_logo{
     /*font-weight: bold; */
     font-size: 20px;
-    margin: 15px;
-    color: white;
+    margin: 5px;
+    color: black;
+    top: 40px;
     
 }
 .logo{
     height: 60px;
     width: 65px;
     margin-left: 50px;
+    margin-top: 10px;
 }
 
 .nav_title{
     position: relative;
     float: right;
     width: 280px;
-    top: 5px;
+    top: 15px;
     text-align: center;
-    color: rgb(2, 11, 111);
+    color:  rgb(3, 21, 71);
     font-size: 22px;
     font-weight: bold;
 }
 
 .nav_title p{
         font-weight: bold;
-        color: rgb(4, 33, 113);
+        color: rgb(9, 37, 116);
+        text-decoration: underline rgb(255, 0, 153) 3px;
     
 }
 
 
 .nav_items a{
     margin: 15px;
-    margin-right: 60px;
-    top: 25px;
-    color: white;
+    margin-right: 45px;
+    top: 45px;
+    color: rgb(2, 8, 48);
+    font-weight: bold;
     position: relative;
     text-decoration: none;
+    text-transform: none;
+    transition: 0.25s ease;
+}
+
+a:hover{
+    font-weight: bold;
+    font-size: 17px;
+    box-shadow: 8px 7px 20px 10px rgba(80, 80, 80, 0.2);
+    text-shadow: #ffffff 1px 0 10px;
+    border-radius: 10px;
+    background-color: #e5b07c;
+    color: #000000;
+    padding: 2px;
+}
+i{
+    height: 20px;
+    width: 20px;
+    margin-right: 5px;
+}
+
+.nav_items a::before,
+.nav_items  a::after{
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 0;
+    background-image: -webkit-linear-gradient(
+        0deg,
+        #f85c9f 0%,
+        #e3ea0f 46%,
+        #70dcbf 86%
+
+    );
+    transition: .5s;
+}
+
+a::after{
+    left: 0;
+    bottom: -10px;
+
+}
+a::before{
+    right: 0;
+    top: -10;
+
+}
+a:hover::after,
+a:hover::before{
+    width: 100%;
+    margin-top: -10px;
 }
 
 .nav_toggle{
     display: none;
 }
 
-@media(max-width: 760px){
+@media(max-width: 750px){
     .nav_items{
         position: absolute;
         top: 90px;
@@ -69,7 +123,8 @@
         flex-direction: column;
         align-items: left;
         width: 100%;
-        height:200px;
+        height:300px;
+        padding-bottom: 20px;
         transform: translateX(-100%);
         transition: 0.3s ease all;
     }
@@ -92,7 +147,7 @@
     .nav_toggle span{
         width: 30px;
         height: 4px;
-        background: white;
+        background: rgb(0, 0, 0);
         margin-bottom: 5px;
         border-radius: 2px;
         transform-origin: 5px 0px;
