@@ -40,14 +40,14 @@ class UTNA_Tasa_cobertura(models.Model):
     #create the model
     IDTC = models.AutoField(primary_key=True)
     Carrera = models.ForeignKey('carreras', on_delete=models.CASCADE)
-    Año = models.IntegerField()
+    Year = models.IntegerField()
     Incremento_matricula = models.DecimalField()
 
 class UTNA_Eficiencia_IRE(models.Model):
     #create the model
     IDEIRE = models.AutoField(primary_key=True)
     Carrera = models.ForeignKey('carreras', on_delete=models.CASCADE)
-    Año = models.IntegerField()
+    Year = models.IntegerField()
     Indice_retencion = models.DecimalField()
     Indice_desercion = models.DecimalField()
     Indice_eficiencia_terminal = models.DecimalField()
@@ -57,7 +57,7 @@ class UTNA_Tasa_Puntaje_EGETSU(models.Model):
     #create the model
     IDTPEGESTU = models.AutoField(primary_key=True)
     Carrera = models.ForeignKey('carreras', on_delete=models.CASCADE)
-    Año = models.IntegerField()
+    Year = models.IntegerField()
     p_700_800 = models.IntegerField()
     p_801_900 = models.IntegerField()
     p_901_1000 = models.IntegerField()
@@ -70,7 +70,7 @@ class UTNA_Tasa_Puntaje_EGEL(models.Model):
     #create the model
     IDTPEGEL = models.AutoField(primary_key=True)
     Carrera = models.ForeignKey('carreras', on_delete=models.CASCADE)
-    Año = models.IntegerField()
+    Year = models.IntegerField()
     p_700_800 = models.IntegerField()
     p_801_900 = models.IntegerField()
     p_901_1000 = models.IntegerField()
@@ -84,7 +84,7 @@ class UTNA_Tasa_Docentes(models.Model):
     #create the model
     IDTD = models.AutoField(primary_key=True)
     Carrera = models.ForeignKey(carreras, on_delete=models.CASCADE)
-    Año = models.IntegerField()
+    Year = models.IntegerField()
     No_docentes = models.IntegerField()
     Doc_perfil_adecuado = models.IntegerField()
     Tasa_docentes = models.DecimalField()
@@ -93,7 +93,7 @@ class UTNA_Indice_PTC(models.Model):
     #create the model
     IDIPTC = models.AutoField(primary_key=True)
     Carrera = models.ForeignKey(carreras, on_delete=models.CASCADE)
-    Año = models.IntegerField()
+    Year = models.IntegerField()
     Nombre_profesor = models.CharField(max_length=100)
     Nombre_investigacion = models.CharField(max_length=150)
     PE_Pertenecientes = models.ForeignKey(carreras, on_delete = models.CASCADE)
@@ -103,7 +103,7 @@ class UTNA_Indice_PTC(models.Model):
 class UTNA_Tasa_PE_ASAT(models.Model):
     IDTPEASAT = models.AutoField(primary_key=True)
     PE = models.ForeignKey(carreras, on_delete=models.CASCADE)
-    Año = models.IntegerField()
+    Year = models.IntegerField()
     Realizacion = models.DateField()
     Vencimiento = models.DateField()
 
@@ -111,7 +111,7 @@ class UTNA_ISEg_TSU(models.Model):
     #create the model
     IDISEGTSU = models.AutoField(primary_key=True)
     Carrera = models.ForeignKey(carreras, on_delete=models.CASCADE)
-    Año = models.IntegerField()
+    Year = models.IntegerField()
     Bolsa_trabajo = models.DecimalField()
     Op_estadia = models.DecimalField()
     Experiencia_practica = models.DecimalField()
@@ -127,7 +127,7 @@ class UTNA_ISEg_L(models.Model):
     #create the model
     IDISEGL = models.AutoField(primary_key=True)
     Carrera = models.ForeignKey(carreras, on_delete=models.CASCADE)
-    Año = models.IntegerField()
+    Year = models.IntegerField()
     Bolsa_trabajo = models.DecimalField()
     Op_estadia = models.DecimalField()
     Experiencia_practica = models.DecimalField()
@@ -143,7 +143,7 @@ class UTNA_ISEm_TSU(models.Model):
     #create the model
     IDISEMTSU = models.AutoField(primary_key=True)
     Carrera = models.ForeignKey(carreras, on_delete=models.CASCADE)
-    Año = models.IntegerField()
+    Year = models.IntegerField()
     Op_grado = models.DecimalField()
     Creatividad = models.DecimalField()
     Manejo_equipo = models.DecimalField()
@@ -158,7 +158,7 @@ class UTNA_ISEm_L(models.Model):
     #create the model
     IDISEML = models.AutoField(primary_key=True)
     Carrera = models.ForeignKey(carreras, on_delete=models.CASCADE)
-    Año = models.IntegerField()
+    Year = models.IntegerField()
     Op_grado = models.DecimalField()
     Creatividad = models.DecimalField()
     Manejo_equipo = models.DecimalField()
