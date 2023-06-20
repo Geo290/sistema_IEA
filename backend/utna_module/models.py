@@ -82,24 +82,93 @@ class UTNA_Tasa_Puntaje_EGEL(models.Model):
 # ======= Roberto's ========
 class UTNA_Tasa_Docentes(models.Model):
     #create the model
+    IDTD = models.AutoField(primary_key=True)
+    Carrera = models.ForeignKey(carreras, on_delete=models.CASCADE)
+    Año = models.IntegerField()
+    No_docentes = models.IntegerField()
+    Doc_perfil_adecuado = models.IntegerField()
+    Tasa_docentes = models.DecimalField()
 
 class UTNA_Indice_PTC(models.Model):
     #create the model
+    IDIPTC = models.AutoField(primary_key=True)
+    Carrera = models.ForeignKey(carreras, on_delete=models.CASCADE)
+    Año = models.IntegerField()
+    Nombre_profesor = models.CharField(max_length=100)
+    Nombre_investigacion = models.CharField(max_length=150)
+    PE_Pertenecientes = models.ForeignKey(carreras, on_delete = models.CASCADE)
+    Tipo_profesor = models.CharField(max_length=3)
+    Estado_investigacion = models.CharField(max_length=10) 
 
 class UTNA_Tasa_PE_ASAT(models.Model):
-    #create the model
+    IDTPEASAT = models.AutoField(primary_key=True)
+    PE = models.ForeignKey(carreras, on_delete=models.CASCADE)
+    Año = models.IntegerField()
+    Realizacion = models.DateField()
+    Vencimiento = models.DateField()
 
 class UTNA_ISEg_TSU(models.Model):
     #create the model
+    IDISEGTSU = models.AutoField(primary_key=True)
+    Carrera = models.ForeignKey(carreras, on_delete=models.CASCADE)
+    Año = models.IntegerField()
+    Bolsa_trabajo = models.DecimalField()
+    Op_estadia = models.DecimalField()
+    Experiencia_practica = models.DecimalField()
+    Laboratorios_talleres = models.DecimalField()
+    Infraestructura = models.DecimalField()
+    Dominio_prob_lab = models.DecimalField()
+    Conocimiento_prof = models.DecimalField()
+    Calificacion_MEB5 = models.DecimalField()
+    Op_preparacion = models.DecimalField()
+    Indice_satisfaccion = models.DecimalField()
 
 class UTNA_ISEg_L(models.Model):
     #create the model
+    IDISEGL = models.AutoField(primary_key=True)
+    Carrera = models.ForeignKey(carreras, on_delete=models.CASCADE)
+    Año = models.IntegerField()
+    Bolsa_trabajo = models.DecimalField()
+    Op_estadia = models.DecimalField()
+    Experiencia_practica = models.DecimalField()
+    Laboratorios_talleres = models.DecimalField()
+    Infraestructura = models.DecimalField()
+    Dominio_prob_lab = models.DecimalField()
+    Conocimiento_prof = models.DecimalField()
+    Calificacion_MEB5 = models.DecimalField()
+    Op_preparacion = models.DecimalField()
+    Indice_satisfaccion = models.DecimalField()
 
 class UTNA_ISEm_TSU(models.Model):
     #create the model
+    IDISEMTSU = models.AutoField(primary_key=True)
+    Carrera = models.ForeignKey(carreras, on_delete=models.CASCADE)
+    Año = models.IntegerField()
+    Op_grado = models.DecimalField()
+    Creatividad = models.DecimalField()
+    Manejo_equipo = models.DecimalField()
+    Solucion_prob = models.DecimalField()
+    Op_trabajo = models.DecimalField()
+    Capacidad = models.DecimalField()
+    Cumple_req = models.DecimalField()
+    Calificacion_trabajo = models.DecimalField()
+    Indice_satisfaccion = models.DecimalField()
 
 class UTNA_ISEm_L(models.Model):
     #create the model
+    IDISEML = models.AutoField(primary_key=True)
+    Carrera = models.ForeignKey(carreras, on_delete=models.CASCADE)
+    Año = models.IntegerField()
+    Op_grado = models.DecimalField()
+    Creatividad = models.DecimalField()
+    Manejo_equipo = models.DecimalField()
+    Solucion_prob = models.DecimalField()
+    Op_trabajo = models.DecimalField()
+    Capacidad = models.DecimalField()
+    Cumple_req = models.DecimalField()
+    Calificacion_trabajo = models.DecimalField()
+    Indice_satisfaccion = models.DecimalField()
+    
 
 
 # ====== Miguel's ======
