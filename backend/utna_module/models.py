@@ -7,7 +7,7 @@ from django.db import models
 # the default is False for the both.
 # just mark what you need nullable
 
-# to create an auto increment varable just use:
+# to create an auto increment variable just use:
 # "field_name" = models.AutoField(primary_key=True)
 
 # ====== George's =======
