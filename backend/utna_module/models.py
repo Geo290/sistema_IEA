@@ -1,5 +1,5 @@
 from django.db import models
-
+from admin_module.models import Universidades  
 # SOME NOTES:
 
 # null = True -> this allowes empty fields in DB
@@ -12,25 +12,10 @@ from django.db import models
 
 # ====== George's =======
 # Create your models here.
-class Universidades(models.Model):
-    #create the model
-    IDUniversidad = models.AutoField(primary_key=True)
-    Abreviacion = models.CharField(max_length=10, null=True, blank=True)
-    Nombre = models.CharField(max_length=100, null=True, blank=True)
-    Plan_estudios = models.CharField(max_length=15, null=True, blank=True)
-
-class Usuarios(models.Model):
-    #create the model
-    IDUsuario = models.AutoField(primary_key=True)
-    Nombre_usuario = models.CharField(max_length=200)
-    Contraseña = models.CharField(max_length=8)
-    Cargo = models.CharField(max_length=10)
-    Universidad = models.ForeignKey('Universidades',on_delete=models.CASCADE)
-
-class carreras(models.Model):
+class Carreras(models.Model):
     #create the model
     IDCarrera = models.AutoField(primary_key=True)
-    Universidad = models.ForeignKey('Universidades', on_delete=models.CASCADE)
+    Universidad = models.ForeignKey(Universidades, on_delete=models.CASCADE)
     Nombre = models.CharField(max_length=100)
     Abreviacion = models.CharField(max_length=10)
     Modalidad = models.CharField(max_length=15)
@@ -39,14 +24,14 @@ class carreras(models.Model):
 class UTNA_Tasa_cobertura(models.Model):
     #create the model
     IDTC = models.AutoField(primary_key=True)
-    Carrera = models.ForeignKey('carreras', on_delete=models.CASCADE)
+    Carrera = models.ForeignKey(Carreras, on_delete=models.CASCADE)
     Periodo = models.IntegerField()
     Incremento_matricula = models.DecimalField()
 
 class UTNA_Eficiencia_IRE(models.Model):
     #create the model
     IDEIRE = models.AutoField(primary_key=True)
-    Carrera = models.ForeignKey('carreras', on_delete=models.CASCADE)
+    Carrera = models.ForeignKey(Carreras, on_delete=models.CASCADE)
     Periodo = models.IntegerField()
     Indice_retencion = models.DecimalField()
     Indice_desercion = models.DecimalField()
@@ -56,7 +41,7 @@ class UTNA_Eficiencia_IRE(models.Model):
 class UTNA_Tasa_Puntaje_EGETSU(models.Model):
     #create the model
     IDTPEGESTU = models.AutoField(primary_key=True)
-    Carrera = models.ForeignKey('carreras', on_delete=models.CASCADE)
+    Carrera = models.ForeignKey(Carreras, on_delete=models.CASCADE)
     Periodo = models.IntegerField()
     p_700_800 = models.IntegerField()
     p_801_900 = models.IntegerField()
@@ -69,7 +54,7 @@ class UTNA_Tasa_Puntaje_EGETSU(models.Model):
 class UTNA_Tasa_Puntaje_EGEL(models.Model):
     #create the model
     IDTPEGEL = models.AutoField(primary_key=True)
-    Carrera = models.ForeignKey('carreras', on_delete=models.CASCADE)
+    Carrera = models.ForeignKey(Carreras, on_delete=models.CASCADE)
     Periodo = models.IntegerField()
     p_700_800 = models.IntegerField()
     p_801_900 = models.IntegerField()
@@ -83,7 +68,7 @@ class UTNA_Tasa_Puntaje_EGEL(models.Model):
 class UTNA_Tasa_Docentes(models.Model):
     #create the model
     IDTD = models.AutoField(primary_key=True)
-    Carrera = models.ForeignKey(carreras, on_delete=models.CASCADE)
+    Carrera = models.ForeignKey(Carreras, on_delete=models.CASCADE)
     Periodo = models.IntegerField()
     No_docentes = models.IntegerField()
     Doc_perfil_adecuado = models.IntegerField()
@@ -92,17 +77,17 @@ class UTNA_Tasa_Docentes(models.Model):
 class UTNA_Indice_PTC(models.Model):
     #create the model
     IDIPTC = models.AutoField(primary_key=True)
-    Carrera = models.ForeignKey(carreras, on_delete=models.CASCADE)
+    Carrera = models.ForeignKey(Carreras, on_delete=models.CASCADE)
     Periodo = models.IntegerField()
     Nombre_profesor = models.CharField(max_length=100)
     Nombre_investigacion = models.CharField(max_length=150)
-    PE_Pertenecientes = models.ForeignKey(carreras, on_delete = models.CASCADE)
+    PE_Pertenecientes = models.ForeignKey(Carreras, on_delete = models.CASCADE)
     Tipo_profesor = models.CharField(max_length=3)
     Estado_investigacion = models.CharField(max_length=10) 
 
 class UTNA_Tasa_PE_ASAT(models.Model):
     IDTPEASAT = models.AutoField(primary_key=True)
-    PE = models.ForeignKey(carreras, on_delete=models.CASCADE)
+    PE = models.ForeignKey(Carreras, on_delete=models.CASCADE)
     Periodo = models.IntegerField()
     Realizacion = models.DateField()
     Vencimiento = models.DateField()
@@ -110,7 +95,7 @@ class UTNA_Tasa_PE_ASAT(models.Model):
 class UTNA_ISEg_TSU(models.Model):
     #create the model
     IDISEGTSU = models.AutoField(primary_key=True)
-    Carrera = models.ForeignKey(carreras, on_delete=models.CASCADE)
+    Carrera = models.ForeignKey(Carreras, on_delete=models.CASCADE)
     Periodo = models.IntegerField()
     Bolsa_trabajo = models.DecimalField()
     Op_estadia = models.DecimalField()
@@ -126,7 +111,7 @@ class UTNA_ISEg_TSU(models.Model):
 class UTNA_ISEg_L(models.Model):
     #create the model
     IDISEGL = models.AutoField(primary_key=True)
-    Carrera = models.ForeignKey(carreras, on_delete=models.CASCADE)
+    Carrera = models.ForeignKey(Carreras, on_delete=models.CASCADE)
     Periodo = models.IntegerField()
     Bolsa_trabajo = models.DecimalField()
     Op_estadia = models.DecimalField()
@@ -142,7 +127,7 @@ class UTNA_ISEg_L(models.Model):
 class UTNA_ISEm_TSU(models.Model):
     #create the model
     IDISEMTSU = models.AutoField(primary_key=True)
-    Carrera = models.ForeignKey(carreras, on_delete=models.CASCADE)
+    Carrera = models.ForeignKey(Carreras, on_delete=models.CASCADE)
     Periodo = models.IntegerField()
     Op_grado = models.DecimalField()
     Creatividad = models.DecimalField()
@@ -157,7 +142,7 @@ class UTNA_ISEm_TSU(models.Model):
 class UTNA_ISEm_L(models.Model):
     #create the model
     IDISEML = models.AutoField(primary_key=True)
-    Carrera = models.ForeignKey(carreras, on_delete=models.CASCADE)
+    Carrera = models.ForeignKey(Carreras, on_delete=models.CASCADE)
     Periodo = models.IntegerField()
     Op_grado = models.DecimalField()
     Creatividad = models.DecimalField()
