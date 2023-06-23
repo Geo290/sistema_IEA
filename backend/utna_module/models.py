@@ -159,18 +159,67 @@ class UTNA_ISEm_L(models.Model):
 # ====== Miguel's ======
 class UTNA_Indice_Servicios(models.Model):
     #create the model
-
+    IDIS = models.AutoField(primary_key=True)
+    Carrera = models.ForeignKey(Carreras, on_delete=models.CASCADE)
+    Periodo = models.IntegerField()
+    Salud_externa = models.DecimalField()
+    Bolsa_trabajo = models.DecimalField()
+    Salud_interna = models.DecimalField()
+    Asesoria_academica = models.DecimalField()
+    Actividades_crecimiento = models.DecimalField()
+    Tutoria = models.DecimalField()
+    Orientacion = models.DecimalField()
+    Espacio_expresion = models.DecimalField()
+    Estimulos_desempeño = models.DecimalField()
+    Seguridad = models.DecimalField()
+    Instalaciones = models.DecimalField()
+    Actividades_arte = models.DecimalField()
+    Traslado = models.DecimalField()
+    Fomento_salud = models.DecimalField()
+    Alimentos = models.DecimalField()
+    Indice_satisfaccion = models.DecimalField()
+      
 class UTNA_Tasa_PE_Pertinencia(models.Model):
     #create the model
+    IDTPEP = models.AutoField(primary_key=True)
+    Carrera = models.ForeignKey(Carreras, on_delete=models.CASCADE)
+    Periodo = models.IntegerField()
+    Presenta = models.BooleanField()
+    Fecha_elaboracion = models.DateField() 
 
 class UTNA_Indice_Colocacion(models.Model):
     #create the model
-
+    IDIC = models.AutoField(primary_key=True)
+    Carrera = models.ForeignKey(Carreras, on_delete=models.CASCADE)
+    Periodo = models.IntegerField()
+    Egresados = models.IntegerField()
+    Colocados = models.IntegerField()
+    Indice_colocacion = models.DecimalField()
+    
 class UTNA_Tasa_Mov_Alumnos(models.Model):
     #create the model
-
+    IDTMA = models.AutoField(primary_key=True)
+    Carrera = models.ForeignKey(Carreras, on_delete=models.CASCADE)
+    Periodo = models.IntegerField()
+    Matricula = models.IntegerField()
+    No_alum_viajaron = models.IntegerField()
+    Paises = models.CharField(max_length=100) 
+    Tasa_movilidad = models.DecimalField()
+    
 class UTNA_Tasa_Mov_Docentes(models.Model):
     #create the model
-
+    IDTMD = models.AutoField(primary_key=True)
+    Carrera = models.ForeignKey(Carreras, on_delete=models.CASCADE)
+    Periodo = models.IntegerField()
+    Matricula = models.IntegerField()
+    No_doc_viajaron = models.IntegerField()
+    Paises = models.CharField(max_length=100) 
+    Tasa_movilidad = models.DecimalField()
+    
 class UTNA_Tasa_Acreditacion(models.Model):
     #create the model
+    IDTA = models.AutoField(primary_key=True)
+    Carrera = models.ForeignKey(Carreras, on_delete=models.CASCADE)
+    Periodo = models.IntegerField()
+    Acreditacion = models.BooleanField()
+    Tipo_acreditacion = models.CharField(max_length=50) 
