@@ -12,7 +12,7 @@ from admin_module.models import Universidades
 
 # ====== George's =======
 # Create your models here.
-class Carreras(models.Model):
+class UTNA_Carreras(models.Model):
     #create the model
     IDCarrera = models.AutoField(primary_key=True)
     Universidad = models.ForeignKey(Universidades, on_delete=models.CASCADE)
@@ -223,3 +223,4 @@ class UTNA_Tasa_Acreditacion(models.Model):
     Periodo = models.IntegerField()
     Acreditacion = models.BooleanField()
     Tipo_acreditacion = models.CharField(max_length=50) 
+    
