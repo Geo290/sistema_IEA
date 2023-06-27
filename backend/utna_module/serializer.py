@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from utna_module import models
 
-class UTNA_Carreras(serializers.ModelSerializer):
+class UTNA_Carreras_serializer(serializers.ModelSerializer):
 
     class Meta:
         model = models.UTNA_Carreras
