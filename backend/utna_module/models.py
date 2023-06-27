@@ -20,6 +20,8 @@ class UTNA_Carreras(models.Model):
     Abreviacion = models.CharField(max_length=10)
     Modalidad = models.CharField(max_length=15)
     Nivel = models.CharField(max_length=15)
+    def __str__(self) -> str:
+        return self.Abreviacion
 
 class UTNA_Tasa_cobertura(models.Model):
     #create the model
@@ -27,6 +29,8 @@ class UTNA_Tasa_cobertura(models.Model):
     Carrera = models.ForeignKey(UTNA_Carreras, on_delete=models.CASCADE)
     Periodo = models.IntegerField()
     Incremento_matricula = models.DecimalField(max_digits=5, decimal_places=2)
+    def __str__(self) -> str:
+        return self.Carrera.Abreviacion + '_' + self.Periodo
 
 class UTNA_Eficiencia_IRE(models.Model):
     #create the model
@@ -37,6 +41,8 @@ class UTNA_Eficiencia_IRE(models.Model):
     Indice_desercion = models.DecimalField(max_digits=5, decimal_places=2)
     Indice_eficiencia_terminal = models.DecimalField(max_digits=5, decimal_places=2)
     Indice_titulacion = models.DecimalField(max_digits=5, decimal_places=2)
+    def __str__(self) -> str:
+        return self.Carrera.Abreviacion + '_' + self.Periodo
 
 class UTNA_Tasa_Puntaje_EGETSU(models.Model):
     #create the model
@@ -50,6 +56,8 @@ class UTNA_Tasa_Puntaje_EGETSU(models.Model):
     p_1201_1300 = models.IntegerField()
     puntaje_satisfactorio = models.DecimalField(max_digits=5, decimal_places=2)
     puntaje_sobresaliente = models.DecimalField(max_digits=5, decimal_places=2)
+    def __str__(self) -> str:
+        return self.Carrera.Abreviacion + '_' + self.Periodo
 
 class UTNA_Tasa_Puntaje_EGEL(models.Model):
     #create the model
@@ -63,6 +71,8 @@ class UTNA_Tasa_Puntaje_EGEL(models.Model):
     p_1201_1300  = models.IntegerField()
     puntaje_satisfactorio = models.DecimalField(max_digits=5, decimal_places=2)
     puntaje_sobresaliente = models.DecimalField(max_digits=5, decimal_places=2)
+    def __str__(self) -> str:
+        return self.Carrera.Abreviacion + '_' + self.Periodo
 
 # ======= Roberto's ========
 class UTNA_Tasa_Docentes(models.Model):
@@ -73,6 +83,8 @@ class UTNA_Tasa_Docentes(models.Model):
     No_docentes = models.IntegerField()
     Doc_perfil_adecuado = models.IntegerField()
     Tasa_docentes = models.DecimalField(max_digits=5, decimal_places=2)
+    def __str__(self) -> str:
+        return self.Carrera.Abreviacion + '_' + self.Periodo
 
 class UTNA_Indice_PTC(models.Model):
     #create the model
@@ -84,6 +96,8 @@ class UTNA_Indice_PTC(models.Model):
     PE_Pertenecientes = models.ForeignKey(UTNA_Carreras, on_delete = models.CASCADE, related_name='PE_Pertenecientes')
     Tipo_profesor = models.CharField(max_length=3)
     Estado_investigacion = models.CharField(max_length=10) 
+    def __str__(self) -> str:
+        return self.Carrera.Abreviacion + '_' + self.Periodo
 
 class UTNA_Tasa_PE_ASAT(models.Model):
     IDTPEASAT = models.AutoField(primary_key=True)
@@ -91,6 +105,8 @@ class UTNA_Tasa_PE_ASAT(models.Model):
     Periodo = models.IntegerField()
     Realizacion = models.DateField()
     Vencimiento = models.DateField()
+    def __str__(self) -> str:
+        return self.PE.Abreviacion + '_' + self.Periodo
 
 class UTNA_ISEg_TSU(models.Model):
     #create the model
@@ -107,6 +123,8 @@ class UTNA_ISEg_TSU(models.Model):
     Calificacion_MEB5 = models.DecimalField(max_digits=5, decimal_places=2)
     Op_preparacion = models.DecimalField(max_digits=5, decimal_places=2)
     Indice_satisfaccion = models.DecimalField(max_digits=5, decimal_places=2)
+    def __str__(self) -> str:
+        return self.Carrera.Abreviacion + '_' + self.Periodo
 
 class UTNA_ISEg_L(models.Model):
     #create the model
@@ -123,6 +141,8 @@ class UTNA_ISEg_L(models.Model):
     Calificacion_MEB5 = models.DecimalField(max_digits=5, decimal_places=2)
     Op_preparacion = models.DecimalField(max_digits=5, decimal_places=2)
     Indice_satisfaccion = models.DecimalField(max_digits=5, decimal_places=2)
+    def __str__(self) -> str:
+        return self.Carrera.Abreviacion + '_' + self.Periodo
 
 class UTNA_ISEm_TSU(models.Model):
     #create the model
@@ -138,6 +158,8 @@ class UTNA_ISEm_TSU(models.Model):
     Cumple_req = models.DecimalField(max_digits=5, decimal_places=2)
     Calificacion_trabajo = models.DecimalField(max_digits=5, decimal_places=2)
     Indice_satisfaccion = models.DecimalField(max_digits=5, decimal_places=2)
+    def __str__(self) -> str:
+        return self.Carrera.Abreviacion + '_' + self.Periodo
 
 class UTNA_ISEm_L(models.Model):
     #create the model
@@ -153,6 +175,8 @@ class UTNA_ISEm_L(models.Model):
     Cumple_req = models.DecimalField(max_digits=5, decimal_places=2)
     Calificacion_trabajo = models.DecimalField(max_digits=5, decimal_places=2)
     Indice_satisfaccion = models.DecimalField(max_digits=5, decimal_places=2)
+    def __str__(self) -> str:
+        return self.Carrera.Abreviacion + '_' + self.Periodo
     
 # ====== Miguel's ======
 class UTNA_Indice_Servicios(models.Model):
@@ -176,6 +200,8 @@ class UTNA_Indice_Servicios(models.Model):
     Fomento_salud = models.DecimalField(max_digits=5, decimal_places=2)
     Alimentos = models.DecimalField(max_digits=5, decimal_places=2)
     Indice_satisfaccion = models.DecimalField(max_digits=5, decimal_places=2)
+    def __str__(self) -> str:
+        return self.Carrera.Abreviacion + '_' + self.Periodo
       
 class UTNA_Tasa_PE_Pertinencia(models.Model):
     #create the model
@@ -184,6 +210,8 @@ class UTNA_Tasa_PE_Pertinencia(models.Model):
     Periodo = models.IntegerField()
     Presenta = models.BooleanField()
     Fecha_elaboracion = models.DateField() 
+    def __str__(self) -> str:
+        return self.Carrera.Abreviacion + '_' + self.Periodo
 
 class UTNA_Indice_Colocacion(models.Model):
     #create the model
@@ -193,6 +221,8 @@ class UTNA_Indice_Colocacion(models.Model):
     Egresados = models.IntegerField()
     Colocados = models.IntegerField()
     Indice_colocacion = models.DecimalField(max_digits=5, decimal_places=2)
+    def __str__(self) -> str:
+        return self.Carrera.Abreviacion + '_' + self.Periodo
     
 class UTNA_Tasa_Mov_Alumnos(models.Model):
     #create the model
@@ -203,6 +233,8 @@ class UTNA_Tasa_Mov_Alumnos(models.Model):
     No_alum_viajaron = models.IntegerField()
     Paises = models.CharField(max_length=100) 
     Tasa_movilidad = models.DecimalField(max_digits=5, decimal_places=2)
+    def __str__(self) -> str:
+        return self.Carrera.Abreviacion + '_' + self.Periodo
     
 class UTNA_Tasa_Mov_Docentes(models.Model):
     #create the model
@@ -213,6 +245,8 @@ class UTNA_Tasa_Mov_Docentes(models.Model):
     No_doc_viajaron = models.IntegerField()
     Paises = models.CharField(max_length=100) 
     Tasa_movilidad = models.DecimalField(max_digits=5, decimal_places=2)
+    def __str__(self) -> str:
+        return self.Carrera.Abreviacion + '_' + self.Periodo
     
 class UTNA_Tasa_Acreditacion(models.Model):
     #create the model
@@ -221,4 +255,5 @@ class UTNA_Tasa_Acreditacion(models.Model):
     Periodo = models.IntegerField()
     Acreditacion = models.BooleanField()
     Tipo_acreditacion = models.CharField(max_length=50) 
-    
+    def __str__(self) -> str:
+        return self.Carrera.Abreviacion + '_' + self.Periodo
