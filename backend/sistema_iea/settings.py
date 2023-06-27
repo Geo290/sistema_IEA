@@ -45,7 +45,11 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'coreapi',
+    'utna_module',
+    'admin_module',
 ]
+
+AUTH_USER_MODEL = 'admin_module.Usuarios'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
