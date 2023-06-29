@@ -89,6 +89,8 @@ h2{
 
 .card{
     display: flex;
+    margin-bottom: 35px;
+    float: left;
     flex-wrap: wrap;
     text-align: center;
     justify-content: center;
@@ -111,24 +113,37 @@ h2{
 -ms-transform:scale(1.1);
 -o-transform:scale(1.1);
 transform:scale(1.1);
-box-shadow: 0px 7px 4px 1px rgba(69, 167, 253, 0.919);
--webkit-box-shadow: 0px 5px 15px 6px #7d7d7d3e;
--moz-box-shadow: 0px 17px 9px 60px rgba(57, 210, 157, 0.339);
-border-radius: 15px;
+box-shadow: 2px 7px 8px 1px rgba(3, 7, 13, 0.465);
+
 background-color: rgba(255, 255, 255, 0.325);
 }
 
 .card-imagen{
-    margin-top: 0;
+    margin-top: 10px;
     height: 100px;
-    width: 250px;
+    width: 200px;
     float: left;
+    margin-bottom: 10px;
 
+}
+
+.dos{
+    margin-top: 0;
+    width: 150px;
+    height: 120px;
+    margin-bottom: 3px;
+    float: left;
+}
+
+.r{
+    width: 160px;
 }
 
 .card-info{
     margin-top: 20px;
     margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 20px;
 }
 
 /* Estilo del Boton */
@@ -155,6 +170,7 @@ background-color: rgba(255, 255, 255, 0.325);
     font-size: 13px;
     height: 50px;
     width: 150px;
+    margin-bottom: 5px;
 }
 
 .fancy::before {
@@ -224,17 +240,17 @@ background-color: rgba(255, 255, 255, 0.325);
 }
 
 .fancy:hover .text {
- color: white;
- padding-left: 1.5em;
+    color: white;
+    padding-left: 1.5em;
 }
 
 .fancy:hover .top-key {
- left: -2px;
- width: 0px;
+    left: -2px;
+    width: 0px;
 }
 
 .fancy:hover .bottom-key-1,
- .fancy:hover .bottom-key-2 {
- right: 0;
- width: 0;
+    .fancy:hover .bottom-key-2 {
+    right: 0;
+    width: 0;
 }
