@@ -17,7 +17,6 @@ class Universidades(models.Model):
 
 
 class Usuarios(AbstractUser):
-
     #create the model
     IDUsuario = models.AutoField(primary_key=True)
     #Usuario = models.OneToOneField(User, on_delete=models.CASCADE)
