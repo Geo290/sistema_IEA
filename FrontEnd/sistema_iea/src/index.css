@@ -1,11 +1,4 @@
-*{
-margin: 0;
-padding: 0;
-height: 100%;
-scroll-behavior: smooth;
-}
-
 body{
-    background:linear-gradient(to top, rgba(214, 213, 214, 0.561),rgba(254, 255, 255, 0.436)); background-repeat: cover; 
-
+     height: 1000px;
+     background-color: rgba(222, 222, 222, 0.353);
 }
