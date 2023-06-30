@@ -6,12 +6,14 @@ const Tabla = () => {
   const [showModal, setShowModal] = useState(false);
   const [programas, setProgramas] = useState([]);
   const [nuevoPrograma, setNuevoPrograma] = useState('');
+  const [nuevoPuntajeM, setNuevoPuntajeM] = useState('');
   const [nuevoPuntaje, setNuevoPuntaje] = useState('');
   const [programaSeleccionado, setProgramaSeleccionado] = useState(null);
 
   const agregarPrograma = () => {
     const programa = {
       nombre: nuevoPrograma,
+      mujer: nuevoPuntajeM,
       puntaje: nuevoPuntaje
     };
 
@@ -26,6 +28,7 @@ const Tabla = () => {
         return {
           ...programa,
           nombre: nuevoPrograma,
+          mujer: nuevoPuntajeM,
           puntaje: nuevoPuntaje
         };
       }
@@ -49,6 +52,7 @@ const Tabla = () => {
 
   const resetForm = () => {
     setNuevoPrograma('');
+    setNuevoPuntajeM('');
     setNuevoPuntaje('');
     setProgramaSeleccionado(null);
   };
@@ -63,6 +67,7 @@ const Tabla = () => {
 
   const handleEditPrograma = (programa) => {
     setNuevoPrograma(programa.nombre);
+    setNuevoPuntajeM (programa.mujer);
     setNuevoPuntaje(programa.puntaje);
     setProgramaSeleccionado(programa);
     handleShowModal();
@@ -72,7 +77,7 @@ const Tabla = () => {
       <NavBar />
       <br/>
       <br/>
-      <h2>Tabla de Programa Educativo</h2>
+      <h2>Tasa de cobertura: Incremento de matrícula</h2>
       <hr></hr>
       <Button variant="outline-success" onClick={handleShowModal}>
         Añadir Registro
@@ -83,7 +88,8 @@ const Tabla = () => {
         <thead>
           <tr>
             <th>Programa</th>
-            <th>Puntaje</th>
+            <th>Matrucula Mujeres</th>
+            <th>Matrucula Hombres</th>
             <th>Acciones</th>
           </tr>
         </thead>
@@ -91,6 +97,7 @@ const Tabla = () => {
           {programas.map((programa, index) => (
             <tr key={index}>
               <td>{programa.nombre}</td>
+              <td>{programa.mujer}</td>
               <td>{programa.puntaje}</td>
               <td>
                 <Button
@@ -121,7 +128,7 @@ const Tabla = () => {
         <Modal.Body>
           <Form>
             <Form.Group controlId="formPrograma">
-              <Form.Label>Programa</Form.Label>
+              <Form.Label>Programa Educativo</Form.Label>
               <Form.Control
                 type="text"
                 placeholder="Ingrese el nombre del programa"
@@ -131,10 +138,20 @@ const Tabla = () => {
             </Form.Group>
 
             <Form.Group controlId="formPuntaje">
-              <Form.Label>Puntaje</Form.Label>
+              <Form.Label>Total Matricula Mujeres</Form.Label>
               <Form.Control
-                type="number"
-                placeholder="Ingrese el puntaje"
+                type="text"
+                placeholder="Ingrese el total"
+                value={nuevoPuntajeM}
+                onChange={(e) => setNuevoPuntajeM(e.target.value)}
+              />
+            </Form.Group>
+
+            <Form.Group controlId="formPuntaje">
+              <Form.Label>Total Matricula Hombres</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="Ingrese el total"
                 value={nuevoPuntaje}
                 onChange={(e) => setNuevoPuntaje(e.target.value)}
               />
