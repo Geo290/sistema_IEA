@@ -1,5 +1,7 @@
 from rest_framework import viewsets
 from utna_module import models, serializer
+from django.contrib.auth import login, logout, authenticate
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 class UTNA_Carrera_views(viewsets.ModelViewSet):

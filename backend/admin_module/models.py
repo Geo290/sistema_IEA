@@ -11,7 +11,7 @@ class Universidades(models.Model):
     Abreviacion = models.CharField(max_length=10)
     Nombre = models.CharField(max_length=100, null=True, blank=True)
     Plan_estudios = models.CharField(max_length=15, null=True, blank=True)
-    
+
     def __str__(self) -> str:
         return self.Abreviacion + ': ' + self.Nombre
 
@@ -29,3 +29,7 @@ class Usuarios(AbstractUser):
     Cargo = models.CharField(max_length=10, choices=ROLE_CHOICES)
     Universidad = models.ForeignKey('Universidades',on_delete=models.CASCADE, null=True, blank=True)
     REQUIRED_FIELDS = [ 'password', 'Cargo']
+        
+    def save(self, *args, **kwargs):
+        self.password = make_password(self.password)
+        super(Usuarios, self).save(*args, **kwargs)
