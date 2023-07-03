@@ -7,7 +7,7 @@
     
 
 .container{
-    height: 1400px;
+    height: 1900px;
     background-repeat: repeat-y;
     background-image: url(../../img/barraa.png);
 }
@@ -49,11 +49,29 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 
+
+
 .indicadores{
     float: left;
     height: 100px;
     width: 300px;
     background-color: rgb(66, 26, 145);
+}
+
+.imagenprincipal{
+    position: relative;
+    float: left;
+    margin-right: 20px;
+}
+
+.imagenes{
+    z-index: 6;
+    height: 200px;
+    width: 200px;
+    margin-left: 10px;
+    border-radius: 200px;
+    border: 3px solid rgb(82, 122, 223);
+    padding: 5px;
 }
 
 .quienessomos{
@@ -65,6 +83,8 @@ padding-right: 30px;
 text-align: justify;
 font-size: 18px;
 line-height: 2.2em;
+margin-bottom:50px ;
+
 }
 
 .vision{
@@ -84,7 +104,7 @@ line-height: 2.2em;
     height: 190px;
     margin-bottom: 10px;
 }
-.tittlequienessomos{
+.tittlemisvis{
     font-size: 20px;
     text-decoration: underline;
     color: rgb(0, 0, 0);
@@ -92,6 +112,16 @@ line-height: 2.2em;
     margin-left: 30px;
     margin-bottom: 5px;
 }
+
+.quientittle{
+color: #0a0575;
+font-size: 20px;
+text-decoration: underline;
+padding: 4px;
+margin-left: 30px;
+margin-bottom: 5px;
+}
+
 
 .texto{
     text-align: justify;
@@ -101,19 +131,31 @@ line-height: 2.2em;
     line-height: 1.5;
 }
 
+.textoquien{
+    font-size: 1.2rem;
+    
+    padding-right: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 30px;
+}
+
 .v{
-    background-color: rgba(35, 196, 202, 0.606);
+    background-color: rgba(248, 232, 150, 0.972);
+    border: 1.5px solid rgba(229, 195, 83, 0.693);
     flex: 1;
     margin-left: 70px;
     margin-right: 60px;
     margin-bottom: 20px;
     height: 150px;
     padding: 15px;
+    
+    border-radius: 15px;
 }
 
 .m{
-    background-color: #e5548eaf; 
+    background-color: #f3b276c2; 
     margin-left: 20px;
+    border: 1.5px solid rgba(237, 140, 113, 0.659);
 }
 
 h2{
@@ -121,14 +163,22 @@ h2{
     margin-bottom: 0;
 }
 
+.tittlecards{
+    position: absolute;
+    margin-bottom: 20px;
+    margin-top: 7px;
+}
 
 
 .allcards{
-    padding-top: 30px;
+padding-top: 30px;
+margin-top: 30px;
+position: absolute;
 padding-left: 75px;
 padding-bottom: 30px;
-height: 700px;
-background-color: #0f676f44;
+height: 680px;
+width: 88%;
+background-color: #1516161c;
 
 }
 
@@ -137,15 +187,14 @@ background-color: #0f676f44;
     display: flex;
     margin-bottom: 35px;
     float: left;
-
     flex-wrap: wrap;
     text-align: center;
     justify-content: center;
     padding: 10px;
+    padding-bottom: 50px;
     height:auto;
     width: 250px;
     background-color: rgb(255, 255, 255);
-    padding-bottom: 20px;
     margin-left: 50px;
     box-shadow: 0px 7px 4px 1px rgba(152, 152, 153, 0.919);
     -webkit-box-shadow: 0px 5px 10px 6px rgba(192, 188, 234, 0.408);
@@ -154,11 +203,8 @@ background-color: #0f676f44;
 }
 
 .card:hover{
--webkit-transform:scale(1.1);
--moz-transform:scale(1.1);
--ms-transform:scale(1.1);
--o-transform:scale(1.1);
-transform:scale(1.1);
+    
+    transform: scale(1.1);
 box-shadow: 2px 7px 8px 1px rgba(3, 7, 13, 0.465);
 
 }
@@ -169,8 +215,6 @@ box-shadow: 2px 7px 8px 1px rgba(3, 7, 13, 0.465);
     width: 200px;
     float: left;
     margin-bottom: 10px;
-  
-
 }
 
 .dos{
@@ -194,6 +238,9 @@ box-shadow: 2px 7px 8px 1px rgba(3, 7, 13, 0.465);
 
 /* Estilo del Boton */
 .fancy {
+  /*  position: relative; */
+    position: relative;
+    bottom: 2%;
     background-color: transparent;
     border: 2px solid #000;
     border-radius: 0;
@@ -206,8 +253,8 @@ box-shadow: 2px 7px 8px 1px rgba(3, 7, 13, 0.465);
     margin: 0;
     outline: none;
     overflow: visible;
-    padding: 1.25em 2em;
-    position: relative;
+    padding: 1.25em 1.5em;
+    border-radius: 7px;
     text-align: center;
     text-decoration: none;
     text-transform: none;
@@ -215,18 +262,19 @@ box-shadow: 2px 7px 8px 1px rgba(3, 7, 13, 0.465);
     user-select: none;
     font-size: 13px;
     height: 50px;
-    width: 150px;
+    width: 140px;
     margin-bottom: 5px;
 }
 
 .fancy::before {
     content: " ";
-    width: 1.5625rem;
-    height: 2px;
-    background: black;
+    width: .6625rem;
+    height: 3px;
+    background: rgb(229, 98, 5);
     top: 50%;
-    left: 1.5em;
+    left: 0.8em;
     position: absolute;
+    z-index: 7;
     transform: translateY(-50%);
     transform-origin: center;
     transition: background 0.3s linear, width 0.3s linear;
@@ -235,7 +283,7 @@ box-shadow: 2px 7px 8px 1px rgba(3, 7, 13, 0.465);
 .fancy .text {
     font-size: 1.125em;
     line-height: 1.33333em;
-    padding-left: 2em;
+    padding-left: 0.5em;
     display: block;
     text-align: left;
     transition: all 0.3s ease-in-out;
@@ -245,32 +293,32 @@ box-shadow: 2px 7px 8px 1px rgba(3, 7, 13, 0.465);
 }
 
 .fancy .top-key {
-    height: 20px;
+    height: 4px;
     width: 1.5625rem;
     top: -2px;
     left: 0.625rem;
     position: absolute;
-    background: #e37310;
+    background: #ffffff;
     transition: width 0.5s ease-out, left 0.3s ease-out;
 }
 
 .fancy .bottom-key-1 {
-    height: 2px;
+    height: 3px;
     width: 1.5625rem;
     right: 1.875rem;
     bottom: -2px;
     position: absolute;
-    background: #e8e8e8;
+    background: #1097a9;
     transition: width 0.5s ease-out, right 0.3s ease-out;
 }
 
 .fancy .bottom-key-2 {
-    height: 2px;
-    width: 0.625rem;
+    height: 5px;
+    width: 1.425rem;
     right: 0.625rem;
     bottom: -2px;
     position: absolute;
-    background: #e8e8e8;
+    background: #ff2cab;
     transition: width 0.5s ease-out, right 0.3s ease-out;
 }
 
@@ -287,7 +335,7 @@ box-shadow: 2px 7px 8px 1px rgba(3, 7, 13, 0.465);
 
 .fancy:hover .text {
     color: white;
-    padding-left: 1.5em;
+    padding-left: 1.1em;
 }
 
 .fancy:hover .top-key {
@@ -302,7 +350,11 @@ box-shadow: 2px 7px 8px 1px rgba(3, 7, 13, 0.465);
 }
 
 .pie{
-    background-color: #000000;
+    position: fixed;
+    z-index: 11;
+    bottom: 0;
+    background-color: #ffffff;
+    margin-top: 40px;
     height: 50px;
     width: 100%;
     box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.5);

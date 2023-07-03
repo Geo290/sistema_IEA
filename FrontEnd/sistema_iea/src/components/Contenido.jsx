@@ -11,6 +11,10 @@ import uta from "../img/uta.jpg"
 import utc from "../img/utc.jpg"
 import utm from "../img/utm.png"
 import utr from "../img/utr.jpg"
+import car1 from "../img/carrucel1.jpg"
+import car2 from "../img/carrucel2.jpg"
+import car3 from "../img/carrucel3.jpg"
+
 
 
 const Contenido = () => {
@@ -24,21 +28,26 @@ const Contenido = () => {
         Plan de trabajo para desarrollo de plataforma del plan estratégico del sistema de educación superior 2022-2027
         <img className='logoiea'  id='seccion1' src={iea}  alt="" />
     </div>
-    
+
+ 
     <div className='quienessomos' >
-    <strong className='tittlequienessomos' >¿QUIÉNES SOMOS?</strong> 
-      <p className='textomision'> Somos la asociación Internacional para la Evaluación del Rendimiento Educativo (IEA), que tiene como objetivo investigar la formación en valores cívicos y estudios comparados a gran escala que evalúan el rendimiento educativo así como otros aspectos relevantes de la educación, con el objetivo de comprender el impacto que las políticas y las prácticas educativas tienen dentro y entre los diferentes sistemas educativos. </p> 
+    <div class="imagenprincipal">
+        <img class="imagenes"  alt='gigantes de mexico' src={car1}/>
+    </div> 
+    <strong className='quientittle' >¿QUIÉNES SOMOS?</strong>
+   
+      <p className='textoquien'> Somos la asociación Internacional para la Evaluación del Rendimiento Educativo (IEA), que tiene como objetivo investigar la formación en valores cívicos y estudios comparados a gran escala que evalúan el rendimiento educativo, así como otros aspectos relevantes de la educación, con el objetivo de comprender el impacto que las políticas y las prácticas educativas tienen dentro y entre los diferentes sistemas educativos. </p> 
     </div>
 
 <div className='misvis'>
     <div className='v'>
-    <strong className='tittlequienessomos'>Misión</strong> 
+    <strong className='tittlemisvis'>Misión</strong> 
       <p className='texto'> Proporcionar servicios educativos con excelencia, equidad, inclusión y calidez para coadyuvar en la formación integral de las y los estudiantes adquiriendo las competencias necesarias para lograr una vida plena que contribuya al desarrollo de una sociedad plural, incluyente y humanista. </p> 
       
     </div>
 
     <div className='v m'>
-    <strong className='tittlequienessomos'>Visión</strong> 
+    <strong className='tittlemisvis'>Visión</strong> 
           <p className='texto'> Lograr hacer del Sistema Educativo Estatal líder y ejemplo para la construcción de una sociedad evolutiva, humanista, vinculante y pilar fundamental en el desarrollo de los individuos, a través de la equidad, inclusión y compromiso.</p>
 
     </div>
@@ -46,6 +55,8 @@ const Contenido = () => {
        {/* Tarjetas de universidades */}   
          {/* #1 */}  
     <div className='allcards'> 
+
+    <p className='tittlecards'>Uiversidades del Estado de Aguascalientes:</p>
     
       <div className='card'>
           <div className=''><img  className='card-imagen' src={utna}  alt="" /></div>
