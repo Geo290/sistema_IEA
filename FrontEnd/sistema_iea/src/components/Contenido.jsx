@@ -8,12 +8,12 @@ import normalSantos from "../img/normalsantos.png"
 import normales from "../img/normales.png"
 import upa from "../img/upa.png"
 import uta from "../img/uta.jpg"
+import ena from "../img/ena.png"
+import cañada from "../img/cañada.jpg"
 import utc from "../img/utc.jpg"
 import utm from "../img/utm.png"
 import utr from "../img/utr.jpg"
 import car1 from "../img/carrucel1.jpg"
-import car2 from "../img/carrucel2.jpg"
-import car3 from "../img/carrucel3.jpg"
 
 
 
@@ -29,13 +29,12 @@ const Contenido = () => {
         <img className='logoiea'  id='seccion1' src={iea}  alt="" />
     </div>
 
- 
     <div className='quienessomos' >
     <div class="imagenprincipal">
         <img class="imagenes"  alt='gigantes de mexico' src={car1}/>
     </div> 
     <strong className='quientittle' >¿QUIÉNES SOMOS?</strong>
-   
+    
       <p className='textoquien'> Somos la asociación Internacional para la Evaluación del Rendimiento Educativo (IEA), que tiene como objetivo investigar la formación en valores cívicos y estudios comparados a gran escala que evalúan el rendimiento educativo, así como otros aspectos relevantes de la educación, con el objetivo de comprender el impacto que las políticas y las prácticas educativas tienen dentro y entre los diferentes sistemas educativos. </p> 
     </div>
 
@@ -54,10 +53,12 @@ const Contenido = () => {
 </div>
        {/* Tarjetas de universidades */}   
          {/* #1 */}  
-    <div className='allcards'> 
-
-    <p className='tittlecards'>Uiversidades del Estado de Aguascalientes:</p>
     
+    <div className='allcards'> 
+    <div className='seccionuniv'>
+        <p className='tittlecards'>Universidades del Estado de Aguascalientes:</p>
+      </div>
+
       <div className='card'>
           <div className=''><img  className='card-imagen' src={utna}  alt="" /></div>
           <div className='card-info'>Universidad Tecnológica del Norte de Aguascalientes</div>
@@ -123,7 +124,61 @@ const Contenido = () => {
           <span class="bottom-key-2"></span>
           </button>
       </div> 
-    
+        {/* #7 */}   
+        <div className='card'>
+          <div className=''><img  className='card-imagen normal' src={normalRaf}  alt="" /></div>
+          <div className='card-info'>Normal Rafael Aguilar Lomeli</div>
+          <button class="fancy" href="#">
+          <span class="top-key"></span>
+          <span class="text">Ingresar</span>
+          <span class="bottom-key-1"></span>
+          <span class="bottom-key-2"></span>
+          </button>
+      </div> 
+        {/* #8 */}   
+        <div className='card'>
+          <div className=''><img  className='card-imagen dos' src={normalSantos}  alt="" /></div>
+          <div className='card-info'>Normal Superior Federal José Santos Valdéz</div>
+          <button class="fancy" href="#">
+          <span class="top-key"></span>
+          <span class="text">Ingresar</span>
+          <span class="bottom-key-1"></span>
+          <span class="bottom-key-2"></span>
+          </button>
+      </div> 
+        {/* #9 */}   
+        <div className='card'>
+          <div className=''><img  className='card-imagen dos' src={crena}  alt="" /></div>
+          <div className='card-info'>Centro Regional de Educación Normal de Aguascalientes.</div>
+          <button class="fancy" href="#">
+          <span class="top-key"></span>
+          <span class="text">Ingresar</span>
+          <span class="bottom-key-1"></span>
+          <span class="bottom-key-2"></span>
+          </button>
+      </div> 
+        {/* #10 */}   
+        <div className='card'>
+          <div className=''><img  className='card-imagen dos' src={cañada}  alt="" /></div>
+          <div className='card-info'>Normal Rural Justo Sierra Mendez Cañada Honda</div>
+          <button class="fancy" href="#">
+          <span class="top-key"></span>
+          <span class="text">Ingresar</span>
+          <span class="bottom-key-1"></span>
+          <span class="bottom-key-2"></span>
+          </button>
+      </div> 
+      {/* #11 */}   
+      <div className='card'>
+          <div className=''><img  className='card-imagen dos' src={ena}  alt="" /></div>
+          <div className='card-info'>Escuela Normal de Aguascalientes</div>
+          <button class="fancy" href="#">
+          <span class="top-key"></span>
+          <span class="text">Ingresar</span>
+          <span class="bottom-key-1"></span>
+          <span class="bottom-key-2"></span>
+          </button>
+      </div> 
     
 
 
