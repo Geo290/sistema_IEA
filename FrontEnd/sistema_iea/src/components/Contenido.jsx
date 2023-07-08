@@ -5,7 +5,6 @@ import utna from "../img/utna.png"
 import crena from "../img/crena.png"
 import normalRaf from "../img/normalragael.png"
 import normalSantos from "../img/normalsantos.png"
-import normales from "../img/normales.png"
 import upa from "../img/upa.png"
 import uta from "../img/uta.jpg"
 import ena from "../img/ena.png"
@@ -14,12 +13,16 @@ import utc from "../img/utc.jpg"
 import utm from "../img/utm.png"
 import utr from "../img/utr.jpg"
 import car1 from "../img/carrucel1.jpg"
+import { NavBar } from './NavBar'
+
 
 
 
 const Contenido = () => {
   return (
+  
 <div className='container'>
+<NavBar/>
 <div className='barra' ></div>
 
     <div className='con'>

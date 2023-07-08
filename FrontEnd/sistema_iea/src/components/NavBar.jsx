@@ -9,7 +9,7 @@ return (
         <div className='nav_logo'> <img className='logo' src={logo} alt="logoIEA" /> 
         <div className='nav_title'>Instituto  de Educación de <p>Aguascalientes</p></div></div>
         <div className={`nav_items ${isOpen && "open"}`}>
-        <a href="#seccion1"> INICIO<i className="bi bi-house-fill"></i></a>
+        <a href=""> INICIO<i className="bi bi-house-fill"></i></a>
         <a href="#seccion1"> ¿QUIÉNES SOMOS?</a>
             <a href="#" className='universidades'>UNIVERSIDAD  <i className="bi  bi-caret-down-fill"></i></a>
 
