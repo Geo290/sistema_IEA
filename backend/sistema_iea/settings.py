@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'rest_framework.authtoken',
     'corsheaders',
     'coreapi',
     'utna_module',
@@ -50,6 +51,12 @@ INSTALLED_APPS = [
 ]
 
 AUTH_USER_MODEL = 'admin_module.Usuarios'
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUHTENTICATION_CLASSES':[
+        'rest_framework.authentication.TokenAuthentication',
+    ]
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

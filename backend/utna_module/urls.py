@@ -24,11 +24,10 @@ router.register(r'tasa_mov_alumnos', views.UTNA_Tasa_Mov_Alumnos_views, 'UTNA_Ta
 router.register(r'tasa_mov_docentes', views.UTNA_Tasa_Mov_Docentes_views, 'UTNA_Tasa_Mov_Docentes')
 router.register(r'tasa_acreditacion', views.UTNA_Tasa_Acreditacion_views, 'UTNA_Tasa_Acreditacion')
 
-
-
 urlpatterns = [
   #http://127.0.0.1:8000/utna_module/api/utna_module/UTNA_Carreras/
-  path('api/', include(router.urls)),
+  # path('', views.AuthViewSet.as_view, 'auth'),
+  path('api/v1/', include(router.urls)),
   path('docs/', include_docs_urls(title='Documentacion del modulo UTNA')) # Documentation
 ]
 
