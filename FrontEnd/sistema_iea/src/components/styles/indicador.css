@@ -1,0 +1,110 @@
+.titulo{
+margin-top: 20px;
+height: 50px;
+text-align: left;
+}
+
+
+.tabla .titulos {
+background-color: rgb(155, 155, 155);
+font-weight: bold;
+text-align: center;
+}
+
+.c{
+    height: auto;
+    padding-bottom: 20px;
+}
+
+
+.tabla{
+    height: 200px
+}
+
+.tabla th {
+    background-color: #2e2e2e;
+    height: 40px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    border: 2px solid rgb(230, 230, 230);
+    text-align: center;
+    margin-bottom: 20px;
+    }
+
+.tabla td{
+    background-color: rgb(208, 208, 208);
+    color: black;
+    border: 2px solid rgb(238, 238, 238);
+    padding-left: 15px;
+}    
+hr{
+    background-color: rgb(6, 134, 36);
+    height: 10px;
+    width: 100%;
+}
+
+.boton-modal{
+    width: 190px;
+    height: 70px;
+    text-align: center;
+    background-color: rgba(88, 169, 74, 0.911);
+    margin: 10px;
+    margin-left: 20px;
+
+}
+
+.editar{
+    background-color: rgb(234, 168, 45);
+    border: 1px solid rgb(228, 136, 49);
+}
+
+.modal{
+    height: 550px;
+}
+
+.modal-header{
+height: 100px;
+background-color: rgb(128, 185, 131);
+}
+
+.modal-tittle{
+/*  background-color: aqua;*/
+    width: 100%;
+    height: 30px;
+    margin-bottom: 70px;
+}
+
+.anadir{
+margin-top: 50px;
+}
+
+.modal-body{
+ /*   background-color: rgb(255, 179, 0);*/
+}
+
+.form{
+ /*   background-color: rgb(177, 50, 169);*/
+    height: 40px;
+}
+
+.form-control{
+margin-bottom: 20px;
+}
+.dd{
+    margin-top: 90px;
+    /*  background-color: rgb(236, 19, 19);*/
+
+}
+
+
+.button{
+    margin-top: 70px;
+    width: 100px;
+    height: 50px;
+    margin-bottom: 50px;
+}
+
+.mb{
+    height: 40px;
+
+}
