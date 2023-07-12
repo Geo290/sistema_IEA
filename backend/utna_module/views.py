@@ -78,3 +78,10 @@ class UTNA_Tasa_Acreditacion_views(viewsets.ModelViewSet):
     serializer_class = serializer.UTNA_Tasa_Acreditacion_serializer
     queryset = models.UTNA_Tasa_Acreditacion.objects.all()
  
+class UTNA_Tasa_Puntaje_ExTSU_views(viewsets.ModelViewSet):
+    serializer_class = serializer.UTNA_Tasa_Puntaje_ExTSU_serializer
+    queryset = models.UTNA_Tasa_Puntaje_ExTSU.objects.all()
+
+class UTNA_Tasa_Puntaje_ExL_views(viewsets.ModelViewSet):
+    serializer_class = serializer.UTNA_Tasa_Puntaje_ExL_serializer
+    queryset = models.UTNA_Tasa_Puntaje_ExL.objects.all()
