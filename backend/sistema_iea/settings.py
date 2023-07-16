@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
+    'django.contrib.staticfiles',   
     'rest_framework',
     'rest_framework.authtoken',
     'corsheaders',
@@ -53,9 +53,11 @@ INSTALLED_APPS = [
 AUTH_USER_MODEL = 'admin_module.Usuarios'
 
 REST_FRAMEWORK = {
-    'DEFAULT_AUHTENTICATION_CLASSES':[
+    'DEFAULT_PAGINATION_CLASS':'rest_framework.pagination.LimitOffsetPagination',
+    'PAGE_SIZE': '5',
+    'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.TokenAuthentication',
-    ]
+    ],
 }
 
 MIDDLEWARE = [
