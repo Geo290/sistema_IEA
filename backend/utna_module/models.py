@@ -93,7 +93,7 @@ class UTNA_Indice_PTC(models.Model):
     Carrera = models.ForeignKey(UTNA_Carreras, on_delete=models.CASCADE, related_name='Carrera') 
     Periodo = models.IntegerField()
     Nombre_profesor = models.CharField(max_length=100)
-    Nombre_investigacion = models.CharField(max_length=150)
+    Nombre_investigacion = models.CharField(max_length=250)
     PE_Pertenecientes = models.ForeignKey(UTNA_Carreras, on_delete = models.CASCADE, related_name='PE_Pertenecientes')
     Tipo_profesor = models.CharField(max_length=3)
     Estado_investigacion = models.CharField(max_length=10) 
@@ -217,12 +217,12 @@ class UTNA_Indice_Servicios(models.Model):
 class UTNA_Tasa_PE_Pertinencia(models.Model):
     #create the model
     IDTPEP = models.AutoField(primary_key=True)
-    Carrera = models.ForeignKey(UTNA_Carreras, on_delete=models.CASCADE)
+    PE = models.ForeignKey(UTNA_Carreras, on_delete=models.CASCADE)
     Periodo = models.IntegerField()
     Presenta = models.BooleanField(default=False)
     Fecha_elaboracion = models.DateField() 
     def __str__(self) -> str:
-        return self.Carrera.Abreviacion + '_' + self.Periodo
+        return self.PE.Abreviacion + '_' + self.Periodo
 
 class UTNA_Indice_Colocacion(models.Model):
     #create the model
@@ -272,3 +272,38 @@ class UTNA_Tasa_Acreditacion(models.Model):
     Tipo_acreditacion = models.CharField(max_length=50) 
     def __str__(self) -> str:
         return self.Carrera.Abreviacion + '_' + self.Periodo
+
+#Nuevas tables tablas de EXANI II y III
+
+class UTNA_Tasa_Puntaje_ExTSU(models.Model):
+    #create the model
+    IDTPEXTSU = models.AutoField(primary_key=True)
+    Carrera = models.ForeignKey(UTNA_Carreras, on_delete=models.CASCADE)
+    Periodo = models.IntegerField()
+    p_700_800 = models.IntegerField()
+    p_801_900 = models.IntegerField()
+    p_901_1000 = models.IntegerField()
+    p_1001_1200 = models.IntegerField()
+    p_1201_1300 = models.IntegerField()
+    puntaje_satisfactorio = models.DecimalField(max_digits=5, decimal_places=2)
+    puntaje_sobresaliente = models.DecimalField(max_digits=5, decimal_places=2)
+    def __str__(self) -> str:
+        return self.Carrera.Abreviacion + '_' + self.Periodo
+    
+    
+class UTNA_Tasa_Puntaje_ExL(models.Model):
+    #create the model
+    IDTPEXL = models.AutoField(primary_key=True)
+    Carrera = models.ForeignKey(UTNA_Carreras, on_delete=models.CASCADE)
+    Periodo = models.IntegerField()
+    p_700_800 = models.IntegerField()
+    p_801_900 = models.IntegerField()
+    p_901_1000 = models.IntegerField()
+    p_1001_1200 = models.IntegerField()
+    p_1201_1300 = models.IntegerField()
+    puntaje_satisfactorio = models.DecimalField(max_digits=5, decimal_places=2)
+    puntaje_sobresaliente = models.DecimalField(max_digits=5, decimal_places=2)
+    def __str__(self) -> str:
+        return self.Carrera.Abreviacion + '_' + self.Periodo
+    
+    

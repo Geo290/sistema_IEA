@@ -23,6 +23,9 @@ router.register(r'indice_colocacion', views.UTNA_Indice_Colocacion_views, 'UTNA_
 router.register(r'tasa_mov_alumnos', views.UTNA_Tasa_Mov_Alumnos_views, 'UTNA_Tasa_Mov_Alumnos')
 router.register(r'tasa_mov_docentes', views.UTNA_Tasa_Mov_Docentes_views, 'UTNA_Tasa_Mov_Docentes')
 router.register(r'tasa_acreditacion', views.UTNA_Tasa_Acreditacion_views, 'UTNA_Tasa_Acreditacion')
+router.register(r'tasa_puntaje_extsu', views.UTNA_Tasa_Puntaje_ExTSU_views, 'UTNA_Tasa_Puntaje_ExTSU')
+router.register(r'tasa_puntaje_exl', views.UTNA_Tasa_Puntaje_ExL_views, 'UTNA_Tasa_Puntaje_ExL')
+
 
 urlpatterns = [
   #http://127.0.0.1:8000/utna_module/api/utna_module/UTNA_Carreras/

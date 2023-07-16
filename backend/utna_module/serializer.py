@@ -91,3 +91,15 @@ class UTNA_Tasa_Acreditacion_serializer(serializers.ModelSerializer):
     class Meta:
         model = models.UTNA_Tasa_Acreditacion
         fields = '__all__'
+        
+class UTNA_Tasa_Puntaje_ExTSU_serializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = models.UTNA_Tasa_Puntaje_ExTSU
+        fields = '__all__'
+
+class UTNA_Tasa_Puntaje_ExL_serializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = models.UTNA_Tasa_Puntaje_ExL
+        fields = '__all__'
