@@ -3,7 +3,6 @@ from rest_framework import routers
 from rest_framework.documentation import include_docs_urls
 from utna_module import views
 
-
 router = routers.DefaultRouter()
 router.register(r'carreras', views.UTNA_Carrera_views, 'UTNA_Carreras')
 router.register(r'tasa_cobertura', views.UTNA_Tasa_Cobertura_views, 'UTNA_Tasa')
