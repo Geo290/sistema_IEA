@@ -43,12 +43,12 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='utna_iseg_l',
             name='Trabaja_lugar_estadia',
-            field=models.BooleanField(default=False),
+            field=models.DecimalField(decimal_places=2, default=False, max_digits=5, null=True),
         ),
         migrations.AddField(
             model_name='utna_iseg_tsu',
             name='Trabaja_lugar_estadia',
-            field=models.BooleanField(default=False),
+            field=models.DecimalField(decimal_places=2, default=False, max_digits=5, null=True),
         ),
         migrations.AddField(
             model_name='utna_tasa_acreditacion',
