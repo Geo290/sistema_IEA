@@ -149,96 +149,97 @@ export const editarIsemLic = (id,data) => utnaApi.put(`/isem_l/${id}`,data);
 
 // ========= METODOS PARA INDICE DE SERVICIOS =========
 
-export const listar
+export const listarIndiceServicios = () => utnaApi.get('/indice_servicios/')
 
-export const obtener
+export const obtenerIndiceServiciosId = (id) => utnaApi.get(`/indice_servicios/${id}`);
 
-export const crear
+export const crearIndiceServicios = (data) => utnaApi.post('/indice_servicios/',data);
 
-export const borrar
+export const borrarIndiceServicios = (id) => utnaApi.delete(`/indice_servicios/${id}`);
 
-export const editar
+export const editarIndiceServicios = (id,data) => utnaApi.put(`/indice_servicios/${id}`,data);
 
 // ========= METODOS PARA TASA PE PERTINENCIA =========
 
-export const listar
+export const listarTasaPePertinencia = () => utnaApi.get('/tasa_pe_eertinencia/')
 
-export const obtener
+export const obtenerTasaPePertinencia = (id) => utnaApi.get(`/tasa_pe_eertinencia/${id}`);
 
-export const crear
+export const crearTasaPePertinencia = (data) => utnaApi.post('/tasa_pe_eertinencia/',data);
 
-export const borrar
+export const borrarTasaPePertinencia = (id) => utnaApi.delete(`/tasa_pe_eertinencia/${id}`);
 
-export const editar
+export const editarTasaPePertinencia = (id,data) => utnaApi.put(`/tasa_pe_eertinencia/${id}`,data);
 
 // ========= METODOS PARA INDICE DE COLOCACION =========
 
-export const listar
+export const listarIndiceColocacion = () => utnaApi.get('/indice_colocacion/')
 
-export const obtener
+export const obtenerIndiceColocacion = (id) => utnaApi.get(`/indice_colocacion/${id}`);
 
-export const crear
+export const crearIndiceColocacion = (data) => utnaApi.post('/indice_colocacion/',data);
 
-export const borrar
+export const borrarIndiceColocacion = (id) => utnaApi.delete(`/indice_colocacion/${id}`);
 
-export const editar
+export const editarIndiceColocacion = (id,data) => utnaApi.put(`/indice_colocacion/${id}`,data);
 
 // ========= METODOS PARA TASA DE MOVILIDAD DE ALUMNOS =========
 
-export const listar
+export const listarTasaMovilidadAlumnos = () => utnaApi.get('/tasa_mov_alumnos/')
 
-export const obtener
+export const obtenerTasaMovilidadAlumnos = (id) => utnaApi.get(`/tasa_mov_alumnos/${id}`);
 
-export const crear
+export const crearTasaMovilidadAlumnos = (data) => utnaApi.post('/tasa_mov_alumnos/',data);
 
-export const borrar
+export const borrarTasaMovilidadAlumnos = (id) => utnaApi.delete(`/tasa_mov_alumnos/${id}`);
 
-export const editar
+export const editarTasaMovilidadAlumnos = (id,data) => utnaApi.put(`/tasa_mov_alumnos/${id}`,data);
 
 // ========= METODOS PARA TASA DE MOVILIDAD DE DOCENTES =========
 
-export const listar
+export const listarTasaMovilidadDocentes = () => utnaApi.get('/tasa_mov_docentes/')
 
-export const obtener
+export const obtenerTasaMovilidadDocentes = (id) => utnaApi.get(`/tasa_mov_docentes/${id}`);
 
-export const crear
+export const crearTasaMovilidadDocentes = (data) => utnaApi.post('/tasa_mov_docentes/',data);
 
-export const borrar
+export const borrarTasaMovilidadDocentes = (id) => utnaApi.delete(`/tasa_mov_docentes/${id}`);
 
-export const editar
+export const editarTasaMovilidadDocentes = (id,data) => utnaApi.put(`/tasa_mov_docentes/${id}`,data);
 
 // ========= METODOS PARA TASA DE ACREDITACION =========
 
-export const listar
+export const listarTasaAcreditacion = () => utnaApi.get('/tasa_acreditacion/')
 
-export const obtener
+export const obtenerTasaAcreditacion  = (id) => utnaApi.get(`/tasa_acreditacion/${id}`);
 
-export const crear
+export const crearTasaAcreditacion = (data) => utnaApi.post('/tasa_acreditacion/',data);
 
-export const borrar
+export const borrarTasaAcreditacion = (id) => utnaApi.delete(`/tasa_acreditacion/${id}`);
 
-export const editar
+export const editarTasaAcreditacion = (id,data) => utnaApi.put(`/tasa_acreditacion/${id}`,data);
 
 // ========= METODOS PARA TASA PUNTAJE EXTSU =========
 
-export const listar
+export const listarTasaPuntajeExtsu = () => utnaApi.get('/tasa_puntaje_extsu/')
 
-export const obtener
+export const obtenerTasaPuntajeExtsu = (id) => utnaApi.get(`/tasa_puntaje_extsu/${id}`);
 
-export const crear
+export const crearTasaPuntajeExtsu = (data) => utnaApi.post('/tasa_puntaje_extsu/',data);
 
-export const borrar
+export const borrarTasaPuntajeExtsu = (id) => utnaApi.delete(`/tasa_puntaje_extsu/${id}`);
 
-export const editar
+export const editarTasaPuntajeExtsu = (id,data) => utnaApi.put(`/tasa_puntaje_extsu/${id}`,data);
 
 // ========= METODOS PARA TASA PUNTAJE EXl =========
 
-export const listar
+export const listarTasaPuntajeExl = () => utnaApi.get('/tasa_puntaje_exl/')
 
-export const obtener
+export const obtenerTasaPuntajeExl = (id) => utnaApi.get(`/tasa_puntaje_exl/${id}`);
 
-export const crear
+export const crearTasaPuntajeExl = (data) => utnaApi.post('/tasa_puntaje_exl/',data);
 
-export const borrar
+export const borrarTasaPuntajeExl = (id) => utnaApi.delete(`/tasa_puntaje_exl/${id}`);
 
-export const editar
+export const editarTasaPuntajeExl = (id,data) => utnaApi.put(`/tasa_puntaje_exl/${id}`,data);
+
