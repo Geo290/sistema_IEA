@@ -1,2 +1,2 @@
 # Módulo CRENA
-Corresponde a la Normal CRENA, se incluyen los escripts para creación de tablas e inserciones de información.
+Corresponde a la Normal CRENA, se incluyen los scripts para creación de tablas e inserciones de información.
