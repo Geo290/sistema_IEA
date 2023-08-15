@@ -1,2 +1,2 @@
 # Módulo ENSFA
-Corresponde a la Normal ENSFA, se incluyen los scripts para creación de tablas e inserciones de información.
+Corresponde a la Normal ENSFA, se incluyen los scripts para creación de tablas e inserciones de información, así como los diagramas E-R y Relacional.
